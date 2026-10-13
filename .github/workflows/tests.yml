@@ -60,7 +60,6 @@ jobs:
         with:
             context: .
             push: true
-              # 可选：同时打latest + git commit sha两个标签（作业加分项）
             tags: |
               ${{ secrets.DOCKERHUB_USERNAME }}/cars-crud:latest
               ${{ secrets.DOCKERHUB_USERNAME }}/cars-crud:${{ github.sha }}
